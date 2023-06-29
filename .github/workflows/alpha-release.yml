@@ -1,8 +1,8 @@
-name: 'publish'
+name: 'alpha-build'
 on:
   push:
-    branches:
-      - release
+    tags:
+      - '^v[0-9]+\.[0-9]+\.[0-9]+'
 
 jobs:
   publish-tauri:
@@ -36,5 +36,5 @@ jobs:
           tagName: app-v__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version
           releaseName: 'App v__VERSION__'
           releaseBody: 'See the assets to download this version and install.'
-          releaseDraft: true
-          prerelease: false
+          releaseDraft: false
+          prerelease: true
