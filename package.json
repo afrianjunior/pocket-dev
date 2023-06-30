@@ -1,6 +1,7 @@
 {
   "name": "pocket-dev",
   "version": "0.1.0",
+  "repository": "https://github.com/afrianjunior/pocket-dev",
   "private": true,
   "scripts": {
     "dev": "next dev",
