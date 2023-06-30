@@ -381,6 +381,11 @@
     lodash-es "^4.17.21"
     read-pkg-up "^9.0.0"
 
+"@semrel-extra/npm@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@semrel-extra/npm/-/npm-1.2.2.tgz#bd754f9b13e397a70395c36f2229fd7b69f981e8"
+  integrity sha512-QoOJFUd00ORaqOQUe2wYmwPwa7NRdGGfUhzjZ9UEZqoqymXaBDVmFF2hE3h8mFaTa/iWpAyRrrjTsg8HbSpZyw==
+
 "@swc/helpers@0.5.1":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.1.tgz#e9031491aa3f26bfcc974a67f48bd456c8a5357a"
