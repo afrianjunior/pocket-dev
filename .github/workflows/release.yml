@@ -15,6 +15,7 @@ jobs:
       - uses: ./.github/actions/setup-node
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
+        id: semantic
         with:
           semantic_version: 19.0.5
           branches: |
@@ -37,6 +38,18 @@ jobs:
             @semantic-release/git
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+      - uses: actions/github-script@v6
+        id: release_id
+        with:
+          script: |
+            const { data } = await github.rest.repos.getReleaseByTag({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag: steps.semantic.outputs.new_release_git_tag,
+            })
+            console.log(data)
+            return data.id
+
 
   build-tauri:
     needs: create-release
