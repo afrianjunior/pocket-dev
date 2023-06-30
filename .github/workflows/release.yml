@@ -10,6 +10,9 @@ on:
 jobs:
   create-release:
     runs-on: ubuntu-latest
+    outputs:
+      release_id: ${{ steps.release_id.outputs.result }}
+
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup-node
@@ -40,12 +43,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
       - uses: actions/github-script@v6
         id: release_id
+        env:
+          release_tag: ${{ steps.semantic.outputs.new_release_git_tag }}
         with:
           script: |
             const { data } = await github.rest.repos.getReleaseByTag({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              tag: steps.semantic.outputs.new_release_git_tag,
+              tag: process.env.release_tag,
             })
             console.log(data)
             return data.id
