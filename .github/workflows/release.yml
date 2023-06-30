@@ -18,6 +18,8 @@ jobs:
           NODE_PATH: ${{ github.workspace }}/node_modules
 
   create-release:
+    needs:
+      - init
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
