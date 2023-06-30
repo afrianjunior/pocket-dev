@@ -1,3 +1,11 @@
+# [0.4.0](https://github.com/afrianjunior/pocket-dev/compare/v0.3.0...v0.4.0) (2023-06-30)
+
+
+### Features
+
+* test build ([6e7eb40](https://github.com/afrianjunior/pocket-dev/commit/6e7eb409d94d8f9867e68ff328b30261f0d25b1d))
+* test build ([ba82c16](https://github.com/afrianjunior/pocket-dev/commit/ba82c16c7ba95d8c4c2bd9133dd31bd858f03195))
+
 # [0.3.0](https://github.com/afrianjunior/pocket-dev/compare/v0.2.0...v0.3.0) (2023-06-30)
 
 
