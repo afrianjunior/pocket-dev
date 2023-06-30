@@ -6,7 +6,7 @@ inputs:
   node_version:
     description: Node.js version
     required: false
-    default: "14"
+    default: "16"
 
 runs:
   using: composite
@@ -16,11 +16,11 @@ runs:
       with:
         fetch-depth: 0
 
-    - name: Setup git user to "anakmagang"
+    - name: Setup git user to "afrianjunior"
       shell: bash
       run: |
-        git config user.email "anakmagang@evilfactorylabs.org"
-        git config user.name "anakmagang"
+        git config user.email "afrian.junior26@gmail.com"
+        git config user.name "afrianjunior"
 
     - name: Use Node.js
       uses: actions/setup-node@v3
