@@ -1,3 +1,11 @@
+# [0.5.0](https://github.com/afrianjunior/pocket-dev/compare/v0.4.0...v0.5.0) (2023-06-30)
+
+
+### Features
+
+* add release management ci config ([6865f55](https://github.com/afrianjunior/pocket-dev/commit/6865f555f9a1470cabe3ebdf48e35f9b92d96c85))
+* test build ([8bbc5ba](https://github.com/afrianjunior/pocket-dev/commit/8bbc5bafacadfa76a88af50ef32e3594feace04f))
+
 # [0.4.0](https://github.com/afrianjunior/pocket-dev/compare/v0.3.0...v0.4.0) (2023-06-30)
 
 
