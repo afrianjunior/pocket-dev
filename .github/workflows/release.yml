@@ -43,6 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
       - uses: actions/github-script@v6
         id: release_id
+        if: steps.semantic.outputs.new_release_published == 'true'
         env:
           release_tag: ${{ steps.semantic.outputs.new_release_git_tag }}
         with:
@@ -52,12 +53,11 @@ jobs:
               repo: context.repo.repo,
               tag: process.env.release_tag,
             })
-            console.log(data)
             return data.id
-
 
   build-tauri:
     needs: create-release
+    if: needs.create-release.outputs.release_id
     permissions:
       contents: write
     strategy:
